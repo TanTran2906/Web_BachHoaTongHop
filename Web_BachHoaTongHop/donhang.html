@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đơn Hàng</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./libs/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="../img/data/logo/web.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+	<script src="js/script.js"></script>
+    <script>
+        window.onload=function(){showCart();};
+    </script>
+</head>
+<body class="donhang">
+	<header id="header">
+        <div class="container-top">
+            <div class="container-navbar-left">
+                <ul>
+                    <li><a href="#">Sale sốc 1k |</a></li>
+                    <li><a href="#">Giảm giá lên đến 50% |</a></li>
+                    <li><a href="#">Tải ứng dụng |</a></li>
+                    <li>
+                        <a href="#">Kết nối</a>
+                    </li>
+                    <li>
+                        <div class="link-face-instagram">
+                            <i class="ti-facebook"></i>
+                            <i class="ti-instagram"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container-navbar-right">
+                <ul>
+                    <li class="media_none">
+                        <i class="ti-bell"></i>
+                        <a href="#">Thông báo</a>
+                    </li >
+                    <li class="media_none">
+                        <i class="ti-help-alt"></i>
+                        <a href="#footer">Hỗ trợ</a>
+                    </li>
+
+                    <li class="media_none">
+                        <i class="ti-world"></i>
+                        <a href="#">Tiếng Việt</a>
+                        <!-- <i class="ti-angle-down"></i> -->
+                    </li>
+                    <li>
+                        <a class="login-logout" href="dangky.html">Đăng ký | </a>
+                    </li>
+                    <li>
+                        <a class="register" href="dangnhap.html">Đăng nhập</a>
+                    </li>
+                    <a class="fullName">LÊ KHÔI NGUYÊN</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-bottom">
+            <div class="container-with-search">
+                <img src="img/data/header/logo-delete.png" alt="">
+            </div>
+            <div class="search-bar">
+                <form action="">
+                    <input class="input-search" type="text" placeholder="KHUYẾN MÃI LÊN ĐẾN 50%">
+                    <div class="btn-search">
+                        <i class="ti-search"></i>
+                    </div>
+                </form>
+            </div>
+            <div class="container-navbar-main">
+                <ul>
+                    <li><a href="sanpham.html">Thịt</a></li>
+                    <li><a href="sanpham.html">Cá</a></li>
+                    <li><a href="sanpham.html">Hải sản</a></li>
+                    <li><a href="sanpham.html">Rau củ</a></li>
+                    <li><a href="sanpham.html">Mì</a></li>
+                    <li><a href="sanpham.html">Gia vị</a></li>
+                    <li><a href="sanpham.html">Trứng</a></li>
+                    <li><a href="sanpham.html">Trái cây</a></li>
+                    <li><a href="sanpham.html">Nhu yếu phẩm</a></li>
+                </ul>
+            </div>
+            <a href="#">
+                <div class="header-with-cart" onclick='openCart()'>
+                    <i class="ti-shopping-cart"></i>
+                    <p>GIỎ HÀNG</p>
+                </div>
+            </a>
+    </header>
+	<main id="bill">
+		<article class="main-content">	
+		<p>GIỎ HÀNG CỦA BẠN</p>
+			<table id="cartDetail">
+                <thead>
+                    <tr>
+                        <th>Ảnh sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Thành Tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>	
+				<tbody></tbody>	
+				<tfoot>
+					<tr>
+                        <td colspan="6" align="right">
+                            Tiền hàng: <span id="cost"></span><br>
+                            Thuế: <span id="tax"></span> <br>
+                            <b>Tổng thanh toán:</b> <span id="pay"></span><br>
+                        </td>
+                    </tr>
+				</tfoot>
+				</table>	
+        <div id="foot">
+            <a href="#"><div id="buy" onclick="buy()">ĐẶT HÀNG</div></a>
+            <a href="#"><div id="clear-all" onclick="removeAll()">XÓA GIỎ HÀNG</div></a>
+        </div>
+		</article>						
+	</main>
+	
+</body>
+</html>

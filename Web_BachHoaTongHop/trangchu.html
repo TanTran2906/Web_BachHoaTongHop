@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/chittiet.css">
+  <link rel="stylesheet"  type="text/css"  href="css/trangchu.css">
+  <link rel="stylesheet" href="fonts/Poppins/Poppins-Medium.ttf">
+  <link rel="shortcut icon" href="../img/data/logo/web.png" type="image/x-icon">
+</head>
+<body>
+  <section>
+    <div class="circle">
+    </div>
+    <header>
+     <a href="sanpham.html" class="logo"><img src="img/data/main_page/logo.png"></a>
+     <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+       <li><a href="#"> Trang chủ </a></li>
+       <li><a href="sanpham.html"> Sản phẩm </a></li>
+       <li><a href="dangky.html"> Đăng ký </a></li>
+       <li><a href="dangnhap.html"> Đăng nhập </a></li>
+     </ul>
+   </header>
+
+   <div class="content">
+      <div class="textBox">
+        <h2>It's not just fresh <br> It's<span> Green!</span></h2>
+        <p>Chúng tôi muốn cung cấp cho khách hàng của mình tốc độ và
+          tiện lợi tối đa của việc mua sắm bằng cách đưa các cửa hàng tổng hợp trên tất cả các khu vực bao gồm cả nông thôn.
+          Và chúng tôi cũng tập trung phát triển một kênh mua sắm trực tuyến để phục vụ cho nhiều đối tượng, đặc biệt là nhóm khách hàng trẻ.</p>
+        <a href="sanpham.html"> Learn More </a>
+      </div>
+
+      <div class="imgBox">
+        <img src="img/data/main_page/picwish.png"class="starbucks">
+      </div>
+      
+  </div>
+  
+  <ul class="thumb">
+    <li><img src="img/data/main_page/picwish.png" onclick="imgSlider('img/data/main_page/picwish.png');changeCircleColor('#017143')" ></li>
+    <li><img src="img/data/main_page/cream2.png" onclick="imgSlider('img/data/main_page/cream2.png');changeCircleColor('#eb7495')"></li>        
+    <li><img src="img/data/main_page/veget.png" onclick="imgSlider('img/data/main_page/veget.png');changeCircleColor('#d752b1')"></li>
+  </ul>
+
+  <ul class="sci">
+    <li><a href="#"><img src="img/data/main_page/facebook.png"></a></li>
+    <li><a href="#"><img src="img/data/main_page/twitter.png"></a></li>
+    <li><a href="#"><img src="img/data/main_page/instagram.png"></a></li>
+  </ul>
+ </section>
+
+ <script type="text/javascript">
+  function imgSlider(anything){
+   document.querySelector('.starbucks').src=anything;
+  }
+  function changeCircleColor(color){
+    const circle=document.querySelector('.circle');
+    circle.style.background = color;
+ }
+ function toggleMenu(){
+  var menuToggle = document.querySelector('.toggle');
+  var navigation=document.querySelector('.navigation')
+  menuToggle.classList.toggle('active')
+  navigation.classList.toggle('active')
+}
+                   
+</script>
+
+
+
+<!-- PHẦN 2 -->
+<h1 class="heading">Sản phẩm <span>Sale off</span></h1>
+           
+            
+<section class="featured section container" id="sale">
+   
+    
+    <div class="featured__container grid">
+        <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/data/product/thịt, trứng, cá, hải sản/canh-ga-cp-khay-500g-3-5-canh-202203141122405545_300x300.jpg" alt="" class="featured__img">
+
+            <div class="featured__data">
+                <h3 class="featured__title">Thịt gà</h3>
+                <span class="featured__price">87.000</span>
+            </div>
+
+            <button class="button featured__button">Thêm vào giỏ hàng</button>
+        </article>
+
+        <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/data/product/thịt, trứng, cá, hải sản/dui-bo-nhap-khau-dong-lanh-khay-500g-202203121756406544.jpg" alt="" class="featured__img">
+
+            <div class="featured__data">
+                <h3 class="featured__title">Thịt bò </h3>
+                <span class="featured__price">95.000</span>
+            </div>
+
+            <button class="button featured__button">Thêm vào giỏ hàng</button>
+        </article>
+
+        <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/data/product/sữa, thức ăn cho trẻ/loc-3-hop-sua-tuoi-nguyen-kem-khong-duong.jpg" alt="" class="featured__img">
+
+            <div class="featured__data">
+                <h3 class="featured__title">Sữa </h3>
+                <span class="featured__price">120.000</span>
+            </div>
+
+            <button class="button featured__button">Thêm vào giỏ hàng</button>
+        </article>
+    </div>
+</section>
+  <!--==================== sản phẩm tươi====================-->
+
+<section class="story section container">
+    <div class="story__container grid">
+        <div class="story__data">
+            <h2 class="section__title story__section-title">
+                Sản Phẩm Tươi ngon
+            </h2>
+
+            <h1 class="story__title">
+               Rau Sạch mỗi ngày <br> 
+            </h1>
+
+            <p class="story__description">
+                Rau an toàn 4KFarm với tiêu chí 4 KHÔNG, luôn ưu tiên bảo vệ sức khỏe người tiêu dùng.
+                 Hàm lượng chất xơ cao, chứa nhiều chất dinh dưỡng,
+                 Cải Ngọt 4KFarm là một trong những loại rau được ưa thích để chế biến những món canh rau ngon bổ dưỡng phù hợp với mọi lứa tuổi.
+            </p>
+
+            <a href="#" class="button button--small">Thêm vào giỏ hàng</a>
+        </div>
+
+        <div class="">
+           
+            <img src="img/data/product/rau, củ/cantay4.jpg" width="1000px" height="300px">
+            
+        </div>
+    </div>
+</section>
+
+       <!--==================== PRODUCTS ====================-->
+       <h1 class="heading">Sản phẩm  <span>Mua nhiều</span></h1>
+       <section class="products section container" id="sanpham">
+               
+        <div class="products__container grid">
+            <article class="products__card">
+                <img src="img/data/product/bánh, kẹo/banh-quy-socola.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Bánh Quy socolo</h3>
+                <span class="products__price">30.000</span>
+               
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/bánh/banh-cream-cheese.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Bánh cream cheese</h3>
+                <span class="products__price">30.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/bánh/banh-ca-vi-rong-bien-tuyet-xanh.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Bánh cá </h3>
+                <span class="products__price">23.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/rau, củ/bi-dỏ.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Bí Đỏ</h3>
+                <span class="products__price">10.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/rau, củ/bông cải trắng.jpeg" alt="" class="products__img">
+
+                <h3 class="products__title">Bông cải trắng</h3>
+                <span class="products__price">30.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+            <article class="products__card">
+                <img src="img/data/product/rau, củ/cà chua.jpeg" alt="" class="products__img">
+
+                <h3 class="products__title">Cà chua </h3>
+                <span class="products__price">30.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/thịt, trứng, cá, hải sản/canh-ga-cp-khay-500g-3-5-canh-202203141122405545_300x300.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Cánh gà</h3>
+                <span class="products__price">87.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+
+            <article class="products__card">
+                <img src="img/data/product/thịt, trứng, cá, hải sản/suon heo 4.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Sườn heo </h3>
+                <span class="products__price">48.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+            <article class="products__card">
+                <img src="img/data/product/thịt, trứng, cá, hải sản/tôm càng.jpg" alt="" class="products__img">
+
+                <h3 class="products__title">Tôm càng  </h3>
+                <span class="products__price">150.000</span>
+
+                <button class="products__button">
+                    <i class='bx bx-shopping-bag'></i>
+                </button>
+            </article>
+        </div>
+    </section>
+
+     
+           
+
+<!--==================== NEW ====================-->
+<h1 class="heading">Chương trình  <span>Giảm Giá Sốc</span></h1>
+<section class="new section container" id="new">
+
+<div class="new__container">
+    <div class="swiper new-swiper">
+        <div class="swiper-wrapper">
+            <article class="new__card swiper-slide">
+                <span class="new__tag">Giảm giá sốc</span>
+
+                <img src="img/data/header/header1.jpg" alt="" class="new__img">
+
+                <div class="new__data">
+                    <h3 class="new__title">Kem </h3>
+                    <span class="new__price">12.000</span>
+                </div>
+
+                <button class="button new__button">Thêm vào giỏ hàng</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+                <span class="new__tag">Giảm giá sốc</span>
+
+                <img src="img/data/header/header 4.jpg" alt="" class="new__img">
+
+                <div class="new__data">
+                    <h3 class="new__title">Cá biển</h3>
+                    <span class="new__price">40.000</span>
+                </div>
+
+                <button class="button new__button">Thêm vào giỏ hàng</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+                <span class="new__tag">Giảm giá sốc</span>
+
+                <img src="img/data/header/header3.jpg" alt="" class="new__img">
+
+                <div class="new__data">
+                    <h3 class="new__title">Nước xả</h3>
+                    <span class="new__price">50.000</span>
+                </div>
+
+                <button class="button new__button">Thêm vào giỏ hàng</button>
+            </article>
+
+            <article class="new__card swiper-slide">
+                <span class="new__tag">Giảm giá sốc</span>
+
+                <img src="img/data/header/hea.jpg" alt="" class="new__img">
+
+                <div class="new__data">
+                    <h3 class="new__title">Trà- KẸO- Cà PHÊ</h3>
+                    <span class="new__price">Giảm 41%</span>
+                </div>
+                <a href="sanpham.html">
+                  <button class="button new__button">ĐẾN MUA </button>
+                </a>
+                
+            </article>                       
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!--==================== FOOTER ====================-->
+
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollup" id="scroll-up"> 
+<i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+</a>
+
+<!--=============== SWIPER JS ===============-->
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

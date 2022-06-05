@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="shortcut icon" href="../img/data/logo/web.png" type="image/x-icon">
+    <title>Trang quản trị</title>
+    <link href="quantri.css" rel="stylesheet">
+</head>
+<body>
+    <div class= "container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-light bg-success">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1 text-white">QUẢN LÝ CỬA HÀNG</span>
+                         <a href="../sanpham_nguoiban.html"><img src="../img/data/header/logo-delete.png" class="img-header"></a>
+                </div>
+            </nav>
+        </div>
+        <div class= "row">
+           <div class ="col-lg-2 bg-light border-bottom border-end border-2">
+            <div >
+                <div class="list-group mt-2 mb-2">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1"><i class="fa-solid fa-tags"></i>Quản lý đơn hàng</a>
+                    <a class="list-group-item list-group-item-action" href="danhmuc.html"><i class="fa-solid fa-file-lines"></i> Quản lý danh mục</a>
+                    <a class="list-group-item list-group-item-action active" href="sp1.html"><i class="fa-brands fa-itch-io"></i>Quản lý sản phẩm</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4"><i class="fa-solid fa-chart-column"></i>Doanh thu</a>
+                </div>
+            </div>
+           </div>
+           <div class ="col-lg-10 mt-2">
+                <div>
+                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><i class="fa-solid fa-house"></i><a href="">Quản lý sản phẩm</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <h2>Danh sách sản phẩm</h2>
+                <a class="btn btn-primary mb-3 float-lg-end" href="form-sp.html" role="button"><i class="fa-solid fa-plus"></i>Thêm sản phẩm</a>
+
+                <table class="table table-bordered text-center">
+                    <tr>
+                        <th>ID</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Trạng thái</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><img width="80px" src="../img/data/product/bánh, kẹo/banh-qui-no-sanrio-goi-50g-2-org.jpg"></td>
+                        <td>Bánh quy hình nơ Sanrio</td>
+                        <td>Bánh, kẹo</td>
+                        <td>100</td>
+                        <td>55.000 đ</td>
+                        <td>
+                            <select name="tgt" id="">
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><img width="80px" src="../img/data/product/nước uống/6-chai-nuoc-ngot-coca-cola.jpg"></td>
+                        <td>Lốc 6 chai nước ngọt coca</td>
+                        <td>Nước uống</td>
+                        <td>100</td>
+                        <td>25.000 đ</td>
+                        <td>
+                            <select name="tgt" id="">
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><img width="80px" src="../img/data/product/nước uống/ca-phe-den-da-g7-2-in-1.jpg"></td>
+                        <td>Cafe đen đá</td>
+                        <td>Nước uống</td>
+                        <td>100</td>
+                        <td>39.000 đ</td>
+                        <td>
+                            <select name="tgt" id="">
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><img width="80px" src="../img/data/product/nước uống/nuoc-ngot-mirinda-vi-soda-kem-15-lit.jpg"></td>
+                        <td>Nước ngọt mirinda vị kem</td>
+                        <td>Nước uống</td>
+                        <td>100</td>
+                        <td>10.000 đ</td>
+                        <td>
+                            <select name="tgt" id="">
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><img width="80px" src="../img/data/product/nước uống/6-lon-soda-schwepper.jpg"></td>
+                        <td>Lốc 6 lon soda</td>
+                        <td>Nước uống</td>
+                        <td>100</td>
+                        <td>35.400 đ</td>
+                        <td>
+                            <select name="tgt" id="">
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Xóa</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="sp1.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="sp1.html">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="sp2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="sp3.html">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="sp3.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+           </div>
+        </div>
+     </div>
+</body>
+</html>
+

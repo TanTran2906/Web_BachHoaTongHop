@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../img/data/logo/web.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      
+    />
+    <title>Signup</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/dangki.css" />
+  </head>
+  <body>
+    <div class="signup">
+      <h1 class="signup-heading">Sign up</h1>
+      <a href="#" class="signup-link">
+        <button class="signup-social">
+            <img src="img/data/background_regis/google-logo.png" alt="">
+            <span  class="signup-social-text">Sign up with Google</span>
+        </button>
+      </a>
+      
+      <div class="signup-or"><span>Or</span></div>
+      <form  class="signup-form" autocomplete="off" name="regfr" action="dangnhap.html" method="get" onsubmit="return frmValidate()">
+        <label for="fullname" class="signup-label">Full name</label>
+        <input type="text" name="hoten" id="fullname" class="signup-input" placeholder="Eg: John Doe">
+        <label for="sdt" class="signup-label">Số điện thoại</label>
+        <input type="text"  pattern="\d{10}" name="sdt" id="sdt" class="signup-input" placeholder="Eg: 09012*****">
+        <!-- <label for="email" class="signup-label">Email</label>
+        <input type="email" name="mail" id="email" class="signup-input" placeholder="Eg: johndoe@gmail.com"> -->
+        <label for="password" class="signup-label">Password</label>
+        <input type="password" name="mk" id="password" class="signup-input" placeholder="Mật khẩu từ 8 kí tự">
+        <button class="signup-submit">Sign up</button>
+      </form>
+      <p class="signup-already">
+        <span>Already have an account ?</span>
+        <a href="dangnhap.html" class="signup-login-link">Login</a>
+      </p>
+    </div>
+
+    <script>
+        function frmValidate(){
+            var frm=document.forms['regfr'];
+            //frm.hoten -> lấy dữ liệu nhập trên trình duyệt gán vào mahv
+            
+            var hoten=frm.hoten;
+            var mail=frm.mail;
+            
+            //Kiểm tra địa chỉ mail hợp lệ
+            // var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+            //kt họ tên ko rỗng 
+            if(hoten.value.length==0){
+                alert("Hãy điền họ tên!");
+                hoten.focus();
+                return false;
+            }
+            var sdt=frm.sdt;
+            if(sdt.value.length!=10){
+                alert("Số điện thoại gồm 10 số!");
+                sdt.focus();
+                return false;
+            }
+            // //Địa chỉ mail hợp lệ
+            // if(!filter.test(mail.value)){
+            //     alert("Nhập lại mail");
+            //     mail.focus();
+            //     return false;
+            // }
+            var mk=frm.mk;
+                //Kiểm tra độ mạnh cùa mk
+                var strongRegis = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+                //var strongRegis = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+                
+                //Mật khẩu hợp lệ
+                if(!strongRegis.test(mk.value)){
+                    alert("Mật khẩu phải gồm các kí tự (8): hoa, thường, số, kí tự đặc biệt.");
+                    mk.focus();
+                    return false;
+                }
+    
+            alert("Đăng kí thành công");
+            return true;
+        }
+    </script>
+  </body>
+
+
+
+
+</html>

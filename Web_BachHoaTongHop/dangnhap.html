@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="../img/data/logo/web.png" type="image/x-icon">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/dangnhap.css" />
+</head>
+
+<body>
+  <div class="signup">
+    <h1 class="signup-heading">Log in</h1>
+
+    <div class="signup-or"><span>Welcome</span></div>
+    <form class="signup-form" autocomplete="on" name="login-form" action="sanpham.html">
+      <!-- <label for="fullname" class="signup-label">Full name</label>
+        <input type="text" name="hoten" id="fullname" class="signup-input" placeholder="Eg: John Doe"> -->
+      <label for="sdt" class="signup-label">Số điện thoại</label>
+      <input required type="text" name="username" id="sdt" class="signup-input" placeholder="Eg: 09012*****">
+      <!-- <label for="email" class="signup-label">Email</label>
+        <input type="email" name="mail" id="email" class="signup-input" placeholder="Eg: johndoe@gmail.com"> -->
+      <label for="password" class="signup-label">Password</label>
+      <input required type="password" name="password" id="password" class="signup-input"
+        placeholder="Mật khẩu từ 8 kí tự">
+      <input type="checkbox" class="save-user-info" name="" id="">
+      <span style="font-size: 15px; line-height: 1.6;">Lưu thông tin đăng nhập</span>
+      <button onclick="formValidate()" class="signup-submit">Log in</button>
+    </form>
+
+    <p class="signup-already">
+      <span>You're Welcome!</span>
+
+    </p>
+  </div>
+
+
+  <script>
+    var account = [
+      {
+        
+        username: '0901213180',
+        pw: '@Quan1000',
+        fullName: 'Lê Văn Quan'
+      },
+      {
+
+        username: '0941932689',
+        pw: '@Yen1001',
+        fullName: 'Trịnh Hoàng Yến'
+      },
+      {
+
+        username: '0338999053',
+        pw: '@Bao1002',
+        fullName: 'Nguyễn Gia Bảo'
+      }
+    ];
+
+    var admin = [
+      {
+        username: 'Quantrivien1',
+        pw: '@Traidau123',
+        fullName: 'Nguyễn Gia Kỳ'
+      },
+      {
+        username: 'Quantrivien2',
+        pw: '@Traikiwi123',
+        fullName: 'Nguyễn Gia Hân'
+      }
+    ]
+
+    var frm = document.forms['login-form'];
+    var user = frm.username;
+    var pass = frm.password;
+    var status = false;
+    var fullName = '';
+
+    frm.addEventListener('submit', function (e) {
+      formValidate();
+      handleSaveStatusUserLogin();
+    });
+    function formValidate() {
+      var flag = 0;
+      
+      account.forEach(taikhoan => {
+        if ((taikhoan.username == user.value) && (taikhoan.pw == pass.value)) {
+          flag = 1;
+          fullName = taikhoan.fullName;
+        }
+      });
+      var sub_flag=0;
+      admin.forEach(quantri => {
+        if ((quantri.username == user.value) && (quantri.pw == pass.value)) {
+          sub_flag = 1;
+          fullName = quantri.fullName;
+        }
+      });
+      let userInfo = {
+        username: user.value,
+        password: pass.value,
+        fullName: fullName
+      }
+
+      if (status) {
+        localStorage.setItem('status', JSON.stringify(status));
+      } else {
+        localStorage.removeItem('status');
+      }
+      frm.reset();
+      if (flag == 1) {
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+        alert("Đăng nhập thành công!");
+        window.location.href = "sanpham.html";
+        return true;
+      }
+      else if(sub_flag==1){
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+        alert("Đăng nhập thành công!");
+        window.location.href = "sanpham_nguoiban.html";
+        return true;
+      }
+      else {
+        alert("Sai username hoặc password!");
+        return false;
+      }
+    }
+
+    function handleSaveStatusUserLogin() {
+      var save = frm.querySelector('.save-user-info');
+      if (save.checked) {
+        status = true;
+      } else {
+        status = false;
+      }
+      console.log(status)
+
+    }
+
+  </script>
+</body>
+
+
+
+
+</html>

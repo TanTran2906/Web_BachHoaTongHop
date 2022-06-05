@@ -1,0 +1,23 @@
+.list-group{
+    height: auto;
+    width: auto;
+}
+
+i{
+    padding-left: 3px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.img-header{
+    width: 150px;
+    height: 46px;
+    float: right;
+    display: block;
+}
+
+.back{
+    float: right;
+}
+
+
